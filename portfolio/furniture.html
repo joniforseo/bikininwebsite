@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Furniture | BikininWebsite</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Unique Layout: Minimalist Masonry */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+        
+        body { background-color: #faf9f6; color: #3e3b38; font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 400; }
+        
+        nav { background-color: transparent; border: none; backdrop-filter: none; }
+        
+        .furn-header { padding: 150px 0 80px; text-align: center; }
+        .furn-header h1 { font-size: 4.5rem; color: #2c2a28; margin-bottom: 20px; }
+        .furn-header p { font-size: 1.1rem; max-width: 600px; margin: 0 auto; color: #6b6661; }
+
+        .mockup-display { padding: 0 20px 100px; display: flex; justify-content: center; }
+        .mockup-img { max-width: 900px; width: 100%; border-radius: 4px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+
+        .masonry-section { padding: 80px 0; background: white; }
+        .masonry-grid { column-count: 2; column-gap: 30px; }
+        .masonry-item { break-inside: avoid; margin-bottom: 30px; position: relative; overflow: hidden; }
+        .masonry-item img { width: 100%; border-radius: 4px; }
+        .masonry-item:nth-child(odd) { padding-top: 40px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+            <a href="../index.html" class="logo" style="color:#2c2a28; font-family:'Playfair Display'; font-weight:600;"><i class="fa-solid fa-arrow-left"></i> Back</a>
+            <a href="#" class="btn" style="background:#2c2a28; color:white; border-radius:0;">Order Website</a>
+        </div>
+    </nav>
+
+    <header class="furn-header">
+        <div class="container">
+            <h1>Lumina Studio</h1>
+            <p>Elegance in every pixel. A highly aesthetic, minimalist e-commerce platform designed for premium furniture brands.</p>
+        </div>
+    </header>
+
+    <div class="mockup-display">
+        <img src="../assets/images/portfolio_furniture.png" alt="Furniture Mockup" class="mockup-img">
+    </div>
+
+    <section class="masonry-section">
+        <div class="container">
+            <h2 style="text-align:center; margin-bottom:50px;">Aesthetic Focus</h2>
+            <div class="masonry-grid">
+                <div class="masonry-item">
+                    <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=600&q=80" alt="Detail 1">
+                </div>
+                <div class="masonry-item">
+                    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=600&q=80" alt="Detail 2">
+                </div>
+                <div class="masonry-item">
+                    <h3 style="margin-bottom:20px; font-size:2rem;">Whitespace & Typography</h3>
+                    <p style="color:#6b6661; line-height:1.8;">Desain ini memaksimalkan penggunaan whitespace untuk memberikan kesan mewah. Typography menggunakan perpaduan serif dan sans-serif yang elegan, memastikan produk furnitur Anda menjadi pusat perhatian utama tanpa gangguan visual.</p>
+                </div>
+                <div class="masonry-item">
+                    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=80" alt="Detail 3">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

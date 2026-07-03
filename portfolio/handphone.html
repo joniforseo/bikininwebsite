@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Handphone | BikininWebsite</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Unique Layout: Dynamic 3D/Comparison */
+        body { background: #000; color: #fff; font-family: 'Inter', sans-serif; }
+        nav { background: transparent; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .logo, .nav-links li a { color: white !important; }
+        
+        .hp-hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden; }
+        .hp-hero-bg { position: absolute; width: 150vw; height: 150vw; background: radial-gradient(circle, rgba(124,58,237,0.2) 0%, rgba(0,0,0,1) 50%); z-index: -1; }
+        
+        .hp-title { font-size: 6rem; font-weight: 800; background: linear-gradient(to right, #a855f7, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; }
+        
+        .hp-mockup-section { padding: 50px 0 100px; display: flex; justify-content: center; }
+        .hp-mockup { max-width: 900px; width: 90%; border-radius: 24px; box-shadow: 0 0 100px rgba(124,58,237,0.3); border: 1px solid rgba(255,255,255,0.1); }
+        
+        .hp-specs { display: flex; justify-content: center; gap: 80px; padding: 50px 0; border-top: 1px solid rgba(255,255,255,0.1); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .hp-spec-item { text-align: center; }
+        .hp-spec-value { font-size: 2.5rem; font-weight: 700; margin-bottom: 5px; }
+        .hp-spec-label { color: #9ca3af; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+            <a href="../index.html" class="logo"><i class="fa-solid fa-arrow-left"></i> Kembali</a>
+            <a href="#" class="btn" style="background:#fff; color:#000;">Buat Website Serupa</a>
+        </div>
+    </nav>
+
+    <header class="hp-hero">
+        <div class="hp-hero-bg"></div>
+        <div>
+            <h1 class="hp-title">NOVA X PRO</h1>
+            <p style="font-size: 1.5rem; color: #d1d5db; max-width: 600px; margin: 0 auto;">Dynamic landing page design demonstrating high-performance smartphone capabilities through immersive web experience.</p>
+        </div>
+    </header>
+
+    <section class="hp-mockup-section">
+        <img src="../assets/images/portfolio_handphone.png" class="hp-mockup" alt="Handphone Web Mockup">
+    </section>
+
+    <div class="hp-specs">
+        <div class="hp-spec-item">
+            <div class="hp-spec-value">120Hz</div>
+            <div class="hp-spec-label">Web Refresh Rate</div>
+        </div>
+        <div class="hp-spec-item">
+            <div class="hp-spec-value">WebGL</div>
+            <div class="hp-spec-label">3D Rendering</div>
+        </div>
+        <div class="hp-spec-item">
+            <div class="hp-spec-value">A+</div>
+            <div class="hp-spec-label">SEO Score</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Bengkel UMKM | BikininWebsite</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background-color: #0f172a; color: white; }
+        nav { background-color: rgba(15, 23, 42, 0.9); border-bottom: 1px solid #1e293b; }
+        .logo, .nav-links li a { color: white !important; }
+        
+        .auto-hero {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .auto-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(90deg, #0f172a 0%, transparent 100%);
+            z-index: 1;
+        }
+        .auto-hero-bg {
+            position: absolute; right: -10%; top: 50%;
+            transform: translateY(-50%);
+            width: 70%;
+            z-index: 0;
+            opacity: 0.7;
+        }
+        .auto-content { position: relative; z-index: 2; max-width: 600px; padding-left: 5%; }
+        .auto-content h1 { font-size: 5rem; text-transform: uppercase; letter-spacing: 2px; color: white; margin-bottom: 10px; }
+        .auto-content h1 span { color: #dc2626; }
+        
+        .specs-section { padding: 100px 0; background: #1e293b; }
+        .specs-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: #334155; border: 1px solid #334155; }
+        .spec-item { background: #1e293b; padding: 40px 20px; text-align: center; }
+        .spec-item i { font-size: 2rem; color: #dc2626; margin-bottom: 15px; }
+        .spec-item h4 { color: white; margin-bottom: 5px; }
+        .spec-item p { color: #94a3b8; font-size: 0.9rem; margin: 0; }
+
+        .mockup-container { padding: 100px 0; text-align: center; background: #0f172a; }
+        .mockup-img { max-width: 1000px; width: 90%; border-radius: 12px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
+        
+        @media (max-width: 768px) {
+            .specs-grid { grid-template-columns: 1fr 1fr; }
+            .auto-content h1 { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+            <a href="../index.html" class="logo"><i class="fa-solid fa-arrow-left"></i> Kembali</a>
+            <a href="#contact" class="btn btn-primary" style="background:#dc2626; border-color: #dc2626;">Bikin Website Bengkel</a>
+        </div>
+    </nav>
+
+    <header class="auto-hero">
+        <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=1200&q=80" class="auto-hero-bg" alt="Bengkel">
+        <div class="auto-content">
+            <h1>BENGKEL <span>JAYA</span></h1>
+            <p style="color:#94a3b8; font-size:1.2rem; margin-bottom:30px;">Website profesional untuk usaha bengkel otomotif. Memudahkan pelanggan booking servis, cek promo, dan melihat layanan yang Anda tawarkan.</p>
+            <a href="#mockup" class="btn btn-primary" style="background:transparent; border:2px solid #dc2626; color:white;">Lihat Desain</a>
+        </div>
+    </header>
+
+    <section id="mockup" class="mockup-container">
+        <h2 style="color:white; margin-bottom: 40px;">Bawa Bengkel Anda Online</h2>
+        <img src="../assets/images/portfolio_otomotif.png" alt="Otomotif Mockup" class="mockup-img">
+    </section>
+
+    <section class="specs-section">
+        <div class="container">
+            <h2 style="color:white;">Fitur Andalan Bengkel UMKM</h2>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <i class="fa-solid fa-car"></i>
+                    <h4>Katalog Layanan</h4>
+                    <p>Daftar harga servis & sparepart</p>
+                </div>
+                <div class="spec-item">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <h4>Booking Online</h4>
+                    <p>Sistem antrean servis praktis</p>
+                </div>
+                <div class="spec-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <h4>Chat Langsung</h4>
+                    <p>Tanya-jawab via WhatsApp</p>
+                </div>
+                <div class="spec-item">
+                    <i class="fa-solid fa-star"></i>
+                    <h4>Ulasan Pelanggan</h4>
+                    <p>Tingkatkan kepercayaan pembeli</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

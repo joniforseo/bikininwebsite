@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Smart Home | BikininWebsite</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Unique Layout: Lifestyle Split Screen */
+        body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+        
+        .split-layout { display: flex; height: 100vh; }
+        
+        .split-left { flex: 1; padding: 60px; display: flex; flex-direction: column; justify-content: space-between; background: #fff; }
+        
+        .split-right { flex: 1; background: url('https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1200&q=80') center/cover; position: relative; }
+        
+        .nav-back { text-decoration: none; color: #1f2937; font-weight: 500; font-size: 1.1rem; }
+        
+        .content-wrap { max-width: 500px; }
+        .content-wrap h1 { font-size: 4rem; color: #111827; line-height: 1.1; margin-bottom: 20px; }
+        .content-wrap p { font-size: 1.1rem; color: #6b7280; margin-bottom: 40px; }
+        
+        .interactive-mockup { position: absolute; left: -150px; top: 50%; transform: translateY(-50%); width: 150%; max-width: 800px; border-radius: 20px; box-shadow: 20px 20px 60px rgba(0,0,0,0.3); border: 8px solid white; }
+    </style>
+</head>
+<body>
+    <div class="split-layout">
+        <div class="split-left">
+            <div>
+                <a href="../index.html" class="nav-back"><i class="fa-solid fa-arrow-left"></i> Kembali ke Portfolio</a>
+            </div>
+            
+            <div class="content-wrap">
+                <h1>Smart Living, <br>Reimagined.</h1>
+                <p>Website interaktif untuk penyedia solusi Smart Home. Desain hangat yang memadukan teknologi canggih dengan kenyamanan gaya hidup rumah modern.</p>
+                <div style="display:flex; gap:15px;">
+                    <a href="#" class="btn btn-primary" style="background:#111827;">Konsultasi Projek</a>
+                    <a href="#" class="btn btn-outline">Lihat Fitur</a>
+                </div>
+            </div>
+            
+            <div style="display:flex; gap:30px; border-top: 1px solid #e5e7eb; padding-top: 20px;">
+                <div>
+                    <strong style="display:block; font-size:1.5rem; color:#111827;">100%</strong>
+                    <span style="color:#6b7280; font-size:0.9rem;">Custom UI</span>
+                </div>
+                <div>
+                    <strong style="display:block; font-size:1.5rem; color:#111827;">Fast</strong>
+                    <span style="color:#6b7280; font-size:0.9rem;">Load Time</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="split-right">
+            <img src="../assets/images/portfolio_smarthome.png" alt="Smart Home App Interface" class="interactive-mockup">
+        </div>
+    </div>
+</body>
+</html>

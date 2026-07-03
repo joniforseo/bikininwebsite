@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Restoran UMKM | BikininWebsite</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Unique Layout: F&B Grid & Menu Showcase */
+        .fb-hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80') center/cover;
+            color: white;
+            padding: 200px 0 150px;
+            text-align: center;
+        }
+        .fb-hero h1 { color: white; font-size: 4rem; }
+        .fb-stats { display: flex; justify-content: center; gap: 40px; margin-top: 40px; }
+        .stat-box { text-align: center; }
+        .stat-box h3 { color: #f59e0b; font-size: 2.5rem; margin-bottom: 5px; }
+        
+        .fb-menu-section { padding: 100px 0; background: #fffaf0; }
+        .menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 50px; }
+        .menu-item { display: flex; gap: 20px; align-items: center; background: white; padding: 20px; border-radius: 12px; box-shadow: var(--shadow-sm); }
+        .menu-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; }
+        
+        .project-mockup { margin: -100px auto 100px; max-width: 900px; position: relative; z-index: 10; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-xl); border: 8px solid white; }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="../index.html" class="logo"><i class="fa-solid fa-arrow-left"></i> Kembali</a>
+            <ul class="nav-links">
+                <li><a href="#" class="btn btn-primary" style="color:white; padding:8px 20px;">Bikin Website Kuliner</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="fb-hero">
+        <div class="container">
+            <h1>Rumah Makan & Katering Bunda</h1>
+            <p style="color: #e2e8f0; font-size: 1.2rem;">Contoh Website Profesional untuk Usaha Restoran & Katering UMKM</p>
+            <div class="fb-stats">
+                <div class="stat-box"><h3>+50%</h3><p>Pesanan Masuk</p></div>
+                <div class="stat-box"><h3>Praktis</h3><p>Order via WA</p></div>
+                <div class="stat-box"><h3>100%</h3><p>Ramah di HP</p></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container project-mockup">
+        <img src="../assets/images/portfolio_fb.png" alt="F&B Website Mockup" style="width: 100%;">
+    </div>
+
+    <section class="fb-menu-section">
+        <div class="container">
+            <h2>Fitur Andalan: Menu Digital Cerdas</h2>
+            <p style="text-align:center; max-width:600px; margin: 0 auto;">Pelanggan bisa langsung lihat foto makanan, harga, dan klik pesan yang langsung terhubung ke WhatsApp warung/resto Anda.</p>
+            
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=150&q=80" class="menu-img" alt="Burger">
+                    <div>
+                        <h4 style="margin-bottom:5px; font-size:1.2rem;">Ayam Bakar Madu Spesial</h4>
+                        <p style="margin-bottom:5px; font-size:0.9rem;">Bumbu meresap sampai ke tulang, bikin nagih!</p>
+                        <span style="color:#f59e0b; font-weight:bold;">Rp 45.000</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=150&q=80" class="menu-img" alt="Pizza">
+                    <div>
+                        <h4 style="margin-bottom:5px; font-size:1.2rem;">Paket Nasi Box Hemat</h4>
+                        <p style="margin-bottom:5px; font-size:0.9rem;">Cocok untuk acara kantor atau arisan keluarga.</p>
+                        <span style="color:#f59e0b; font-weight:bold;">Rp 85.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
