@@ -1,82 +1,1159 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Restoran UMKM | BikininWebsite</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Unique Layout: F&B Grid & Menu Showcase */
-        .fb-hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80') center/cover;
-            color: white;
-            padding: 200px 0 150px;
-            text-align: center;
-        }
-        .fb-hero h1 { color: white; font-size: 4rem; }
-        .fb-stats { display: flex; justify-content: center; gap: 40px; margin-top: 40px; }
-        .stat-box { text-align: center; }
-        .stat-box h3 { color: #f59e0b; font-size: 2.5rem; margin-bottom: 5px; }
-        
-        .fb-menu-section { padding: 100px 0; background: #fffaf0; }
-        .menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 50px; }
-        .menu-item { display: flex; gap: 20px; align-items: center; background: white; padding: 20px; border-radius: 12px; box-shadow: var(--shadow-sm); }
-        .menu-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; }
-        
-        .project-mockup { margin: -100px auto 100px; max-width: 900px; position: relative; z-index: 10; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-xl); border: 8px solid white; }
-    </style>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Chikuro</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="https://www.chikuro.com/public/assets/template/img/favicon.ico" rel="icon">
+  <link href="https://www.chikuro.com/public/assets/template/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Amatic+SC:wght@400;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="https://www.chikuro.com/public/assets/template/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" media='all' />
+  <link href="https://www.chikuro.com/public/assets/template/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" media='all' />
+  <link href="https://www.chikuro.com/public/assets/template/vendor/aos/aos.css" />
+  <link href="https://www.chikuro.com/public/assets/template/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://www.chikuro.com/public/assets/template/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="https://www.chikuro.com/public/assets/template/css/main.css" rel="stylesheet">
+
+  <link rel="preload" href="https://www.chikuro.com/public/assets/template/img/logo-merah.png" as='image' type='image/png' />
+  <link rel='preload' href="https://www.chikuro.com/public/assets/template/img/chikuro/about1.jpg" as='image' type='image/jpg' />
 </head>
-<body>
-    <nav>
-        <div class="container">
-            <a href="../index.html" class="logo"><i class="fa-solid fa-arrow-left"></i> Kembali</a>
-            <ul class="nav-links">
-                <li><a href="#" class="btn btn-primary" style="color:white; padding:8px 20px;">Bikin Website Kuliner</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <header class="fb-hero">
-        <div class="container">
-            <h1>Rumah Makan & Katering Bunda</h1>
-            <p style="color: #e2e8f0; font-size: 1.2rem;">Contoh Website Profesional untuk Usaha Restoran & Katering UMKM</p>
-            <div class="fb-stats">
-                <div class="stat-box"><h3>+50%</h3><p>Pesanan Masuk</p></div>
-                <div class="stat-box"><h3>Praktis</h3><p>Order via WA</p></div>
-                <div class="stat-box"><h3>100%</h3><p>Ramah di HP</p></div>
+<style>
+  .bubble-text {
+    position: fixed;
+    bottom: 20px;
+    right: 70px;
+    background-color: #b41a1a;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  #kemitraan img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .event-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .event-slide img {
+    width: auto;
+    /* Mengikuti ukuran asli gambar */
+    max-width: 100%;
+    /* Mencegah gambar melebihi ukuran container */
+    height: auto;
+    /* Mengikuti proporsi gambar */
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-header {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+</style>
+
+<body class="index-page">
+  <div class="bubble-text">
+    *Harga Tiap Daerah Dapat Berbeda-beda
+  </div>
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="#" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="https://www.chikuro.com/assets/img/logo.png" alt=""> -->
+        <h1 class="sitename"><img src="https://www.chikuro.com/public/assets/template/img/logo-merah.png" alt="" fetchpriority="high" height='80' width='120' class="logo-header"></h1>
+
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#home" class="active">Home<br></a></li>
+          <li><a href="#about">Tentang Kami</a></li>
+          <li><a href="#produk-kami">Produk</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#kemitraan">Kemitraan</a></li>
+          <li><a href="#outlet">Outlet</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="https://wa.me/62818215888" target="_blank">Hubungi</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section">
+
+      <div class="container">
+        <div class="row gy-4 justify-content-center justify-content-lg-between">
+          <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <p>
+                At <b>Chikuro</b>, we blend taste with innovation, crafting premium snacks that keep you
+                coming back for more. Elevate your snacking experience, let's try Chikuro today and join a
+                growing community of taste enthusiasts. Ready to level up?
+                <br>
+                <br>
+                チクロでは、味と革新を融合させ、何度も食べたくなるプレミアムスナックを提供しています。スナックの体験を高め、今日チクロを試して、味を愛するコミュニティに参加しませんか？次のステージへ進む準備はできましたか？
+            </p>
+            <div class="d-flex">
+              <a href="#book-a-table" class="btn-get-started">Tentang Kami</a>
+              
             </div>
+          </div>
+          <div class="col-lg-5 order-1 order-lg-2 hero-img">
+            <br>
+            <br>
+            <br>
+            <img src="https://www.chikuro.com/public/assets/template/img/logo-merah.png" class="img-fluid animated" alt="" fetchpriority="high" height='80' width='400' />
+          </div>
         </div>
-    </header>
+      </div>
 
-    <div class="container project-mockup">
-        <img src="../assets/images/portfolio_fb.png" alt="F&B Website Mockup" style="width: 100%;">
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="font-size: 30px; color:rgb(212, 4, 4)">Tentang Kami<br></h2>
+        <br>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+              <img src="https://www.chikuro.com/public/assets/template/img/fasad.jpg" 
+                   class="img-fluid mb-4" 
+                   alt="" loading="lazy"
+                   style="width: 450px; height: auto; display: block; margin: 0 auto;">
+            <div class="book-a-table">
+              <h3>Hubungi</h3>
+              <a href="https://wa.me/62818215888" target="_blank">
+                <p>+62 818 215 888</p>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="150">
+            <div class="content ps-0 ps-lg-5">
+              <p>
+                Chikuro berkomitmen menghadirkan camilan praktis dan berkualitas yang dapat dinikmati kapan saja. Menggunakan bahan-bahan premium dan diolah dengan standar terbaik, setiap produk kami menawarkan rasa yang kaya dan memanjakan. Dengan konsep kekinian dan inovasi tanpa henti, Chikuro terus berkembang dan siap menjadi teman ngemil andalan Anda. Temukan kelezatan sejati dengan Chikuro – #YourSnackMate.
+                .
+              </p>
+              
+              <div class="position-relative mt-4">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/about1.jpg" class="img-fluid" alt="" height="376" width='282' loading="lazy" style="width: 100%;" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Menu Section -->
+    <section id="produk-kami" class="menu section" style="background-color: rgb(240, 240, 240)">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="color: black">Produk kami</h2>
+        <br>
+        <h2 style="font-size: 30px; color:rgb(212, 4, 4)">Berikut Merupakan Menu Chikuro<br></h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+            <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#chiro-tab">
+                    <h4>Chiro</h4>
+                </a>
+            </li><!-- End tab nav item -->
+
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#gyuro-tab">
+                    <h4>Gyuro</h4>
+                </a>
+            </li><!-- End tab nav item -->
+
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#norimaki-bites-tab">
+                    <h4>Norimaki Bites</h4>
+                </a>
+            </li><!-- End tab nav item -->
+
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#satsuro-age-tab">
+                    <h4>Satsuro-Age</h4>
+                </a>
+            </li><!-- End tab nav item -->
+
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#dezaro-tab">
+                    <h4>Dezaro</h4>
+                </a>
+            </li><!-- End tab nav item -->
+
+        </ul>
+
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="tab-pane fade active show" id="chiro-tab">
+            <div class="tab-header text-center">
+              <p style="color: black">Menu</p>
+              <p style="color:rgb(212, 4, 4); font-size: 30px">Chiro</p>
+            </div>
+            <p class="ingredients" style="font-size: 15px; text-align: center; max-width: 60%;  margin: 0 auto;">
+              Snack terpanjang 1/4 meter Dibuat dengan bahan dasar ayam segar dari kualitas terbaik, dipadukan dengan tepung crunchy premium yang memberikan sensasi crunchy saat digigit, dengan varian isian filling creamy
+            </p>
+            <br>
+            <div class="row gy-5">
+              <div class="col-lg-4 menu-item"></div>
+              <div class="col-lg-4 menu-item">
+                <a href="https://www.chikuro.com/public/assets/template/img/produk/produk_chiro_1.jpg" class="glightbox">
+                  <img
+                    src="https://www.chikuro.com/public/assets/template/img/produk/produk_chiro_1.jpg" class="menu-img img-fluid" alt="" width="256" height="384"
+                    loading="lazy">
+                </a>
+                <h4>Chikuro</h4>
+                <p class="ingredients" style="text-align: justify;">
+                  Chicken roll crunchy panjang dengan isian daging ayam lembut dan bumbu khas Chikuro. Tersedia dalam berbagai ukuran, termasuk Chiro Medium (18 cm),Chiro Large (25 cm) dan Chiro Super Large (35 cm)
+                </p>
+
+              </div><!-- Menu Item -->
+            </div>
+          </div><!-- End Starter Menu Content -->
+
+
+          <div class="tab-pane fade" id="dezaro-tab">
+            <div class="tab-header text-center">
+              <p style="color: black">Menu</p>
+              <p style="color:rgb(212, 4, 4); font-size: 30px">Dezaro</p>
+            </div>
+            <br>
+            <div class="row gy-5">
+              <div class="col-lg-4 menu-item">
+                <a href="https://www.chikuro.com/public/assets/template/img/minuman/Leci.jpg" class="glightbox">
+                  <img
+                    src="https://www.chikuro.com/public/assets/template/img/minuman/Leci.jpg" class="menu-img img-fluid" alt="" width="256" height="384" loading="lazy">
+                </a>
+                <h4>Japanese Ocha Lychee</h4>
+                <p class="ingredients" style="text-align: justify">
+                  Teh hijau khas Jepang yang dipadukan dengan rasa manis dan segar dari buah leci
+                </p>
+
+              </div><!-- Menu Item -->
+              <div class="col-lg-4 menu-item">
+                <a href="https://www.chikuro.com/public/assets/template/img/minuman/Ocha.jpg" class="glightbox"><img
+                    src="https://www.chikuro.com/public/assets/template/img/minuman/Ocha.jpg" class="menu-img img-fluid" alt="" loading="lazy"></a>
+                <h4>Japanese Ocha Green Tea </h4>
+                <p class="ingredients" style="text-align: justify">
+                  Dibuat dari daun teh pilihan, memberikan sensasi ringan, sedikit pahit, dan menyegarkan.
+                </p>
+
+              </div><!-- Menu Item -->
+              <div class="col-lg-4 menu-item">
+                <a href="https://www.chikuro.com/public/assets/template/img/minuman/Stroberi_Yakult.jpg" class="glightbox"><img
+                    src="https://www.chikuro.com/public/assets/template/img/minuman/Stroberi_Yakult.jpg" class="menu-img img-fluid" width="256" height="384" alt="" loading="lazy"></a>
+                <h4>Japanese Ocha Yakult Strawberry</h4>
+                <p class="ingredients" style="text-align: justify">
+                  Teh hijau khas Jepang yang dipadukan dengan Yakult dan stroberi. Rasanya manis, segar.
+                </p>
+  
+              </div><!-- Menu Item -->
+              <div class="col-lg-4 menu-item">
+                <a href="https://www.chikuro.com/public/assets/template/img/minuman/Matcha.jpg" class="glightbox"><img
+                    src="https://www.chikuro.com/public/assets/template/img/minuman/Matcha.jpg" class="menu-img img-fluid" alt="" width="256" height="384" loading="lazy"></a>
+                <h4>Umami Matcha With Cream Cheese Glaze</h4>
+                <p class="ingredients" style="text-align: justify">
+                  Minuman matcha premium dengan rasa khas yang sedikit pahit dan sedikit manis, dipadukan dengan cream cheese glaze yang creamy
+                </p>
+
+              </div><!-- Menu Item -->
+              <div class="col-lg-4 menu-item">
+                <a href="https://www.chikuro.com/public/assets/template/img/minuman/Taro.jpg" class="glightbox"><img
+                    src="https://www.chikuro.com/public/assets/template/img/minuman/Taro.jpg" class="menu-img img-fluid" alt="" width="256" height="384" loading="lazy"></a>
+                <h4>Umami Taro With Cream Cheese
+                  <br>Glaze
+                </h4>
+                <p class="ingredients" style="text-align: justify">
+                  Minuman taro dengan rasa manis, creamy, dan lembut, dipadukan dengan cream cheese glaze yang gurih dan creamy.
+                </p>
+
+              </div><!-- Menu Item -->
+            </div>
+          </div><!-- End Starter Menu Content -->
+
+          <div class="tab-pane fade" id="gyuro-tab">
+            <div class="tab-header text-center">
+              <p style="color: black">Menu</p>
+              <p style="color:rgb(212, 4, 4); font-size: 30px">Gyuro</p>
+              <p class="ingredients" style="font-size: 15px; text-align: center; max-width: 60%;  margin: 0 auto; text-transform: lowercase;">
+                Dibuat dengan 100% daging sapi pilihan terbaik, dipadukan dengan tepung crunchy premium yang memberikan sensasi renyah pada setiap gigitan dengan isian filling creamy signature yang lumer. dengan ukuran medium (18 cm)
+              </p>
+
+            </div>
+
+            <div class="row gy-5">
+              <div class="col-lg-4 menu-item"></div>
+              <div class="col-lg-4 menu-item">
+                <a href="https://www.chikuro.com/public/assets/template/img/produk/Gyuro.jpg" class="glightbox"><img
+                    src="https://www.chikuro.com/public/assets/template/img/produk/Gyuro.jpg" class="menu-img img-fluid" alt="" width="256" height="384" loading="lazy"></a>
+                <h4>Gyuro</h4>
+                <p class="ingredients" style="text-align: justify">
+                  Beef roll dengan sauce filling creamy yang lumer di dalamnya, dengan bumbu khas chikuro, tersedia dalam ukuran (18 cm)
+                </p>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Breakfast Menu Content -->
+
+          <div class="tab-pane fade" id="norimaki-bites-tab">
+
+            <div class="tab-header text-center">
+              <p style="color: black">Menu</p>
+              <p style="color:rgb(212, 4, 4); font-size: 30px">Norimaki Bites</p>
+            </div>
+            <br>
+
+            <div class="row gy-5">
+              <div class="col-lg-4 menu-item">
+                <a href="https://www.chikuro.com/public/assets/template/img/produk/produk_norimaki_beef.jpg" class="glightbox"><img
+                    src="https://www.chikuro.com/public/assets/template/img/produk/produk_norimaki_beef.jpg" class="menu-img img-fluid" width="256" height="384" alt="" loading="lazy"></a>
+                <h4>Norimaki Beef</h4>
+                <p class="ingredients" style="text-align: justify">
+                  Versi daging sapi dari Norimaki Bites, dengan daging sapi berkualitas yang dipadukan dengan lapisan crispy dan nori
+                </p>
+
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <a href="https://www.chikuro.com/public/assets/template/img/produk/produk_norimaki_chicken.jpg" class="glightbox"><img
+                    src="https://www.chikuro.com/public/assets/template/img/produk/produk_norimaki_chicken.jpg" class="menu-img img-fluid" width="256" height="384" alt="" loading="lazy"></a>
+                <h4>Norimaki Chicken</h4>
+                <p class="ingredients" style="text-align: justify">
+                  Camilan ayam crispy yang dibalut dengan nori, dengan bumbu khas chikuro
+                </p>
+
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Lunch Menu Content -->
+
+          <div class="tab-pane fade" id="satsuro-age-tab">
+
+            <div class="tab-header text-center">
+              <p style="color: black">Menu</p>
+              <p style="color:rgb(212, 4, 4); font-size: 30px">SATSURO - AGE</p>
+            </div>
+            <br>
+
+            <div class="row gy-5">
+              <div class="col-lg-4 menu-item"></div>
+              <div class="col-lg-4 menu-item">
+                <a href="https://www.chikuro.com/public/assets/template/img/produk/Satsuroage.jpg" class="glightbox"><img
+                    src="https://www.chikuro.com/public/assets/template/img/produk/Satsuroage.jpg" class="menu-img img-fluid" width="256" height="384" alt="" loading="lazy"></a>
+                <h4>Satsuro - Age</h4>
+                <p class="ingredients" style="text-align: justify">
+                  Fish cake dari ikan dory dengan tekstur lembut dan kenyal
+                </p>
+              </div><!-- Menu Item -->
+            </div>
+
+          </div>
+    </section><!-- /Menu Section -->
+
+
+    <!-- Big Order Section -->
+    <section id="menu" class="events section">
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="container section-title" data-aos="fade-up">
+          <h2 style="color: black">Menu</h2>
+          <br>
+          <h2 style="font-size: 30px; color:rgb(212, 4, 4)">BIG ORDER<br></h2>
+          <br>
+          <br>
+          <img src="https://www.chikuro.com/public/assets/template/img/banner_bigorder.jpg" alt="" data-aos="fade-in" width="226" height="226" loading="lazy" style="width:60%;height:auto" />
+        </div><!-- End Section Title -->
+      </div>
+    </section><!-- /Big Order Section -->
+    <!-- Bundling & Combo Section -->
+    <section id="events" class="events section">
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+        <div class="container section-title" data-aos="fade-up">
+          <h2 style="font-size: 30px; color:rgb(212, 4, 4)">Berikut Merupakan BUNDLING & COMBO<br></h2>
+        </div><!-- End Section Title -->
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 1
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide event-slide">
+              <img src="https://www.chikuro.com/public/assets/template/img/combo/new/1_update_perfect_bundling_chiro_large_satsuro_age.jpg"
+                class="img-fluid"
+                alt="Paket bundling Chikuro Large dan Satsuro Age - promo menu combo hemat 60K"
+                loading="lazy">
+            </div>
+
+            <div class="swiper-slide event-slide">
+              <img src="https://www.chikuro.com/public/assets/template/img/combo/new/2_update_perfect_bundling_chiro_large_satsuro_age.jpg"
+                class="img-fluid"
+                alt="Paket bundling Chikuro Large dan Satsuro Age - promo menu combo hemat"
+                loading="lazy">
+            </div>
+
+            <div class="swiper-slide event-slide">
+              <img src="https://www.chikuro.com/public/assets/template/img/combo/new/3_update_perfect_bundling_chiro_large_satsuro_age.jpg"
+                class="img-fluid"
+                alt="Perfect bundling 1 Chiro Large dengan Satsuro Age - penawaran spesial Chikuro"
+                loading="lazy">
+            </div>
+
+            <div class="swiper-slide event-slide">
+              <img src="https://www.chikuro.com/public/assets/template/img/combo/new/4_update_combo_package_large_potaro.jpg"
+                class="img-fluid"
+                alt="Paket combo Large dengan Potaro - menu bundling Chikuro"
+                loading="lazy">
+            </div>
+
+            <div class="swiper-slide event-slide">
+              <img src="https://www.chikuro.com/public/assets/template/img/combo/new/5_update_combo_package_large_potaro.jpg"
+                class="img-fluid"
+                alt="Combo package Large plus Potaro - promo hemat Chikuro"
+                loading="lazy">
+            </div>
+
+            <div class="swiper-slide event-slide">
+              <img src="https://www.chikuro.com/public/assets/template/img/combo/new/6_update_combo_package_large_potaro.jpg"
+                class="img-fluid"
+                alt="Paket hemat Large dan Potaro - bundling menu Chikuro terbaru"
+                loading="lazy">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Bundling & Combo Section -->
+
+    <!-- Kemitraan & Combo Section -->
+    <!-- <section id="kemitraan" class="events section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="color: black">Kemitraan</h2>
+        <br>
+        <h2 style="font-size: 30px; color:rgb(212, 4, 4)">Berikut Merupakan Informasi Tentang Kemitraan<br></h2>
+      </div>
+      <img src="https://www.chikuro.com/public/assets/template/img/banner_kemitraan.jpg" alt="" data-aos="fade-in" loading="lazy">
+    </section> -->
+    <!-- /Bundling & Combo Section -->
+
+    <section id="kemitraan" class="events section">
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="font-size: 30px; color:rgb(212, 4, 4)">NEW PRODUCT ALERT<br></h2>
+      </div><!-- End Section Title -->
+      <img src="https://www.chikuro.com/public/assets/template/img/new_product-alert.jpg" alt="" data-aos="fade-in" loading="lazy">
+    </section>
+
+
+
+    <!-- Chefs Section -->
+    <section id="outlet" class="chefs section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="color: black">Outlet</h2>
+        <br>
+        <h2 style="font-size: 30px; color:rgb(212, 4, 4)">OUR OUTLET<br></h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+          
+                        <div class="row gy-4">
+                    <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-member">
+                            <img src="https://www.chikuro.com/public/assets/template/img/outlet_detail/outlet_bandung_stories2.jpg"
+                                class="img-fluid" alt="" width="1080" height="1920" loading="lazy">
+                        </div>
+                    </div><!-- End Chef Team Member -->
+
+                    <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-member">
+                            <img src="https://www.chikuro.com/public/assets/template/img/outlet_detail/outlet_jakarta_jabodetabek_stories3.jpg"
+                                class="img-fluid" alt="" width="1080" height="1920" loading="lazy">
+                        </div>
+                    </div><!-- End Chef Team Member -->
+
+                    <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-member">
+                            <img src="https://www.chikuro.com/public/assets/template/img/outlet_detail/outlet_jatim_jateng_stories4.jpg"
+                                class="img-fluid" alt="" width="1080" height="1920" loading="lazy">
+                        </div>
+                    </div><!-- End Chef Team Member -->
+
+                    <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-member">
+                            <img src="https://www.chikuro.com/public/assets/template/img/outlet_detail/outlet_regional_stories5.jpg"
+                                class="img-fluid" alt="" width="1080" height="1920" loading="lazy">
+                        </div>
+                    </div><!-- End Chef Team Member -->
+
+                    <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-member">
+                            <img src="https://www.chikuro.com/public/assets/template/img/outlet_detail/outlet_sumatera_kalimantan_stories6.jpg"
+                                class="img-fluid" alt="" width="1080" height="1920" loading="lazy">
+                        </div>
+                    </div><!-- End Chef Team Member -->
+                </div>
+
+        <div class="row gy-4" style="margin-top: 16px">
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_jakarta_MOI.jpg" class="img-fluid" alt="" width="224" height='400' loading="lazy">
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Mall Of Indonesia </h4>
+                <span>Jakarta</span>
+                <p>RT.18/RW.8, Klp. Gading Bar., Kec. Klp. Gading, Jkt Utara, Daerah Khusus Ibukota Jakarta 14240
+                  LT. 2 Dotonburi - JT 27.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_bandung_ciwalk.jpg" class="img-fluid" alt="" width="224" height='400' loading="lazy">
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Cihampelas Walk</h4>
+                <span>Bandung</span>
+                <p>Cihampelas Walk, Cipaganti, Kecamatan Coblong, Kota Bandung, Jawa Barat 40131, LT. 1.
+                </p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_bandung_TSM.jpg" class="img-fluid" alt="" width="224" height='400' loading="lazy">
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Trans Studio Mall Bandung</h4>
+                <span>Bandung</span>
+                <p>Jl. Gatot Subroto No.289, Maleer, Kec. Batununggal, Kota Bandung, Jawa Barat 40273, LT.2.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_bandung_PVJ_1.jpg" class="img-fluid" alt="" width="224" height='400' loading="lazy">
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Paris Van Java Mall </h4>
+                <span>Bandung</span>
+                <p>Jl. Sukajadi No.137-139, Cipedes, Kec. Sukajadi, Kota Bandung, Jawa Barat 40162, LT. CL.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_bandung_PVJ_2.jpg" class="img-fluid" alt="" width="87%" loading="lazy">
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Paris Van Java Mall 2</h4>
+                <span>Bandung</span>
+                <p>Jl. Sukajadi No.137-139, Cipedes, Kec. Sukajadi, Kota Bandung, Jawa Barat 40162, LT. SL.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_bandung_festival_citylink1.jpg" class="img-fluid" alt="" width="224" height='400' loading="lazy">
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Festival Citylink</h4>
+                <span>Bandung</span>
+                <p>Jl. Peta No.241, Suka Asih, Kec. Bojongloa Kaler, Kota Bandung, Jawa Barat 40232, L.3 Area Foodcourt.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_bandung_festival_citylink2.jpg" class="img-fluid" alt="" width="86%" loading="lazy">
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Festival Citylink 2</h4>
+                <span>Bandung</span>
+                <p>Jl. Peta No.241, Suka Asih, Kec. Bojongloa Kaler, Kota Bandung, Jawa Barat 40232,L. LG.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_bandung_mekarwangi.jpg" class="img-fluid" alt="" width="224" height='400' loading="lazy">
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Chikuro Mekar Wangi </h4>
+                <span>Bandung</span>
+                <p>Jl. RD Rangga Kencana No.49, Cibaduyut, Kec. Bojongloa Kidul, Kota Bandung, Jawa Barat 40237.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_cianjur_citimall.jpg" class="img-fluid" alt="" width="224" height='400' loading="lazy">
+
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Citimall Cianjur 2</h4>
+                <span>Cianjur</span>
+                <p>Pamoyanan, Kec. Cianjur, Kabupaten Cianjur, Jawa Barat LT.2 Area Foodcourt.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_bogor_botani_square.jpg" class="img-fluid" alt="" width="224" height='400' loading="lazy">
+
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Botani Square</h4>
+                <span>Bogor</span>
+                <p>Jl. Raya Pajajaran No.40, RT.04/RW.05, tugu kujang, Kecamatan Bogor Tengah, Kota Bogor, Jawa Barat 16127, LT.2.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_solo_paragon_solo.jpg" class="img-fluid" alt="" width="224" height='400' loading="lazy">
+
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Solo Paragon Mall</h4>
+                <span>Solo</span>
+                <p>Jl. Yosodipuro No.133 Lt. 2, Mangkubumen, Kec. Banjarsari, Kota Surakarta, Jawa Tengah 57139.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_solo_pakuwon_solo.jpg" class="img-fluid" alt="" width="224" height='400' loading="lazy">
+
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Solo Pakuwon Mall</h4>
+                <span>Solo</span>
+                <p>Jl. Ir. Soekarno, Dusun II, Madegondo, Kec. Grogol, Kabupaten Sukoharjo, Jawa Tengah 57552, LT. B1.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_semarang_DP_mall.jpg" class="img-fluid" alt="" width="224" height='400' loading="lazy">
+
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">DP Mall Semarang</h4>
+                <span>Semarang</span>
+                <p>Jl. Pemuda, Sekayu, Kec. Semarang Tengah, Kota Semarang, Jawa Tengah, LT.2.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_surabaya_pakuwon_mall.jpg" class="img-fluid" alt="" width="224" height='400' loading="lazy">
+
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Pakuwon Mall Surabaya</h4>
+                <span>Surabaya</span>
+                <p>Jl. Puncak Indah Jl. Raya Lontar No.2, Babatan, Kec. Wiyung, Surabaya, Jawa Timur 60123, LT. B1.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_surabaya_TP_mall.jpg" class="img-fluid" alt="" width="224" height='400' loading="lazy">
+
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Tunjungan Plaza </h4>
+                <span>Surabaya</span>
+                <p>Tunjungan Plaza, Jl. Basuki Rahmat, Kedungdoro, Kec. Tegalsari, Surabaya, Jawa Timur 60261, LT. LG.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_sidoarjo_lippo_mall.jpg" class="img-fluid" alt="" width="224" height='400' loading="lazy">
+
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Lippo Plaza</h4>
+                <span>Sidoarjo</span>
+                <p>Lantai 2, Jati, Sidoarjo, Sidoarjo Regency, East Java 61226, L-UG- ISLD- 15.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_malang_town_square.jpg" class="img-fluid" alt="" width="224" height='400' loading="lazy">
+
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Malang Town Square </h4>
+                <span>Malang</span>
+                <p>Jl. Veteran No.2 Lantai LG, Penanggungan, Kec. Klojen, Kota Malang, Jawa Timur 65111.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_malang_olympic_garden.jpg" class="img-fluid" alt="" width="224" height='400' loading="lazy">
+
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Chikuro Mall Olympic Garden</h4>
+                <span>Malang</span>
+                <p>Chikuro Mall Olympic Garden, Jl.Kawi No 24 Lt.2 Blok F9.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_jogja_ambarrukmo_plaza.jpeg" class="img-fluid" alt="" width="80%" loading="lazy">
+
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Chikuro Ambarukmo Plaza</h4>
+                <span>Yogyakarta </span>
+                <p>Jl. Laksda Adisucipto, Ambarukmo, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta, LT. LG.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_jogja_pakuwon_mall.jpeg" class="img-fluid" alt="" width='301' height='537' loading="lazy">
+
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Chikuro Pakuwon Mall Jogja</h4>
+                <span>Yogyakarta </span>
+                <p>ATM Center, Jl. Ringroad Utara, Kaliwaru, Condongcatur, Kec. Depok Kabupaten Sleman, Lantai LG (Lower Ground) depan, Yogyakarta, Daerah Istimewa Yogyakarta 55283.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_banjarmasin_duta_mall.jpg" class="img-fluid" alt="" width='301' height='537' loading="lazy">
+
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Chikuro DutaMall Banjarmasin</h4>
+                <span>Banjarmasin</span>
+                <p>Jl. A. Yani No.98, Melayu, Kec. Banjarmasin Tengah, Kota Banjarmasin, Kalimantan Selatan 70232, LT. 3.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_banjarmasin_duta_mall.jpg" class="img-fluid" alt="" width='301' height='537' loading="lazy">
+
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Chikuro DutaMall Banjarmasin</h4>
+                <span>Banjarmasin</span>
+                <p>Jl. A. Yani No.98, Melayu, Kec. Banjarmasin Tengah, Kota Banjarmasin, Kalimantan Selatan 70232, LT. Dasar Foodcourt Dutarasa.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_samarinda_big_mall.jpeg" class="img-fluid" alt="" width='301' height='537' loading="lazy">
+
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Big Mall Samarinda</h4>
+                <span>Samarinda</span>
+                <p>Karang Asam Ulu, Kec. Sungai Kunjang, Kota Samarinda, Kalimantan Timur 75243, LT. GF.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_banjarbaru_qmall.jpeg" class="img-fluid" alt="" width='301' height='537' loading="lazy">
+
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Q Mall</h4>
+                <span>Banjarbaru</span>
+                <p>Jl. A. Yani, Komet, Kec. Banjarbaru Utara, Kota Banjar Baru, Kalimantan Selatan 70714, LT. GF.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+          <div class="col-lg-4 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="https://www.chikuro.com/public/assets/template/img/chikuro/outlet_samarinda_big_mall.jpeg" class="img-fluid" alt="" width="224" height='400' loading="lazy">
+
+              </div>
+              <div class="member-info">
+                <h4 style="color: rgb(202, 3, 3)">Grand Hero</h4>
+                <span>Palu</span>
+                <p>Jl. Jenderal Basuki Rahmat No.31, Tatura Sel., Kec. Palu Sel., Kota Palu, Sulawesi Tengah 94111.</p>
+              </div>
+            </div>
+          </div><!-- End Chef Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Chefs Section -->
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 style="color: black">Gallery</h2>
+        <br>
+        <h2 style="font-size: 30px; color:rgb(212, 4, 4)">CHECK OUR GALLERY<br></h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "centeredSlides": true,
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 0
+                },
+                "768": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 20
+                },
+                "1200": {
+                  "slidesPerView": 5,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+                href="https://www.chikuro.com/public/assets/template/img/chikuro/gallery1.jpg"><img src="https://www.chikuro.com/public/assets/template/img/chikuro/gallery1.jpg" class="img-fluid"
+                  alt="" width='376' height='282' loading="lazy"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+                href="https://www.chikuro.com/public/assets/template/img/chikuro/gallery2.jpg"><img src="https://www.chikuro.com/public/assets/template/img/chikuro/gallery2.jpg" class="img-fluid"
+                  alt="" width='376' height='282' loading="lazy"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+                href="https://www.chikuro.com/public/assets/template/img/chikuro/gallery3.jpg"><img src="https://www.chikuro.com/public/assets/template/img/chikuro/gallery3.jpg" class="img-fluid"
+                  alt="" width='376' height='282' loading="lazy"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+                href="https://www.chikuro.com/public/assets/template/img/chikuro/gallery4.jpg"><img src="https://www.chikuro.com/public/assets/template/img/chikuro/gallery4.jpg" class="img-fluid"
+                  alt="" width='376' height='282' loading="lazy"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+                href="https://www.chikuro.com/public/assets/template/img/chikuro/gallery3.jpg"><img src="https://www.chikuro.com/public/assets/template/img/chikuro/gallery3.jpg" class="img-fluid"
+                  alt="" width='376' height='282'></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery"
+                href="https://www.chikuro.com/public/assets/template/img/chikuro/gallery4.jpg"><img src="https://www.chikuro.com/public/assets/template/img/chikuro/gallery4.jpg" class="img-fluid"
+                  alt="" width='376' height='282' loading="lazy"></a></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Gallery Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Contact</h2>
+        <br>
+        <h2 style="font-size: 30px; color:rgb(212, 4, 4)">HUBUNGI KAMI<br></h2>
+      </div><!-- End Section Title -->
+
+                  <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="info-item d-flex align-items-center">
+                            <i class="icon bi bi-envelope flex-shrink-0"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>chikuro.markom@gmail.com</p>
+                                <p>chikuro.businessdevelopment@gmail.com</p>
+                            </div>
+                        </div>
+                    </div><!-- End Info Item -->
+
+
+                    <div class="col-md-6">
+                        <a href="https://wa.me/62818215888" target="_blank">
+                            <div class="info-item d-flex align-items-center">
+                                <i class="icon bi bi-telephone flex-shrink-0"></i>
+                                <div>
+                                    <h3>Hubungi Kami</h3>
+                                    <p>+62 818 215 888</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div><!-- End Info Item -->
+
+
+                </div>
+
+                <div class="row" style="margin-top: 2rem">
+                    <div class="col-md-6">
+                        <div class="info-item d-flex align-items-center">
+                            <i class="icon bi bi-clock flex-shrink-0"></i>
+                            <div>
+                                <h3>Jam Operasional<br></h3>
+                                <p>
+                                    <strong>OUTLET:</strong> <span>Monday - Sunday : 10.00 - 21.30</span><br>
+                                    <strong>OFFICE</strong>: <span>Monday - Saturday: 09.00 - 17.00</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div><!-- End Info Item -->
+
+
+
+                    <div class="col-md-6">
+                        <a href="https://www.instagram.com/chikuro.id" target="_blank">
+                            <div class="info-item d-flex align-items-center">
+                                <i class="icon bi bi-instagram flex-shrink-0"></i>
+                                <div class="d-flex flex-column">
+                                    <h3>Instagram</h3>
+                                    <p>
+                                        <strong>@chikuro.id</strong>
+                                    </p>
+                                    <br>
+                                </div>
+                            </div>
+                        </a>
+                    </div><!-- End Info Item -->
+
+                </div>
+
+                <div class="row" style="margin-top: 2rem">
+                    <div class="col-md-6">
+                        <a href="https://www.tiktok.com/@chikuroindonesia" target="_blank">
+                            <div class="info-item d-flex align-items-center">
+                                <i class="icon bi bi-tiktok flex-shrink-0"></i>
+                                <div class="d-flex flex-column">
+                                    <h3>Tiktok</h3>
+                                    <p style="display: block">
+                                        <strong>@chikuroindonesia</strong>
+                                    </p>
+                                    <br>
+                                </div>
+                            </div>
+                        </a>
+                    </div><!-- End Info Item -->
+                </div>
+
+            </div>
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container copyright">
+      <div class="row gy-3 justify-content-center">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div class="address">
+            <h4>Address</h4>
+            <p>Jl. RD Rangga Kencana No.49, Cibaduyut, Kec. Bojongloa Kidul, Kota Bandung, Jawa Barat 40237</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Contact</h4>
+            <p>
+              <strong>Phone:</strong> <span>+62 818 215 888</span><br>
+              <strong>Email:</strong> <span>chikuro.markom@gmail.com</span><br>
+              <strong>Email:</strong> <span>chikuro.businessdevelopment@gmail.com</span><br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>
+              <strong>OUTLET:</strong> <span>Monday - Sunday : 10.00 - 21.30</span><br>
+              <strong>OFFICE:</strong> <span>Monday - Saturday: 09.00 - 17.00</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Chikuro</strong> <span>All Rights Reserved</span>
+      </p>
     </div>
 
-    <section class="fb-menu-section">
-        <div class="container">
-            <h2>Fitur Andalan: Menu Digital Cerdas</h2>
-            <p style="text-align:center; max-width:600px; margin: 0 auto;">Pelanggan bisa langsung lihat foto makanan, harga, dan klik pesan yang langsung terhubung ke WhatsApp warung/resto Anda.</p>
-            
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=150&q=80" class="menu-img" alt="Burger">
-                    <div>
-                        <h4 style="margin-bottom:5px; font-size:1.2rem;">Ayam Bakar Madu Spesial</h4>
-                        <p style="margin-bottom:5px; font-size:0.9rem;">Bumbu meresap sampai ke tulang, bikin nagih!</p>
-                        <span style="color:#f59e0b; font-weight:bold;">Rp 45.000</span>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=150&q=80" class="menu-img" alt="Pizza">
-                    <div>
-                        <h4 style="margin-bottom:5px; font-size:1.2rem;">Paket Nasi Box Hemat</h4>
-                        <p style="margin-bottom:5px; font-size:0.9rem;">Cocok untuk acara kantor atau arisan keluarga.</p>
-                        <span style="color:#f59e0b; font-weight:bold;">Rp 85.000</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  </footer>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+
+  <!-- Vendor JS Files -->
+  <script src="https://www.chikuro.com/public/assets/template/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://www.chikuro.com/public/assets/template/vendor/php-email-form/validate.js"></script>
+  <script src="https://www.chikuro.com/public/assets/template/vendor/aos/aos.js"></script>
+  <script src="https://www.chikuro.com/public/assets/template/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="https://www.chikuro.com/public/assets/template/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="https://www.chikuro.com/public/assets/template/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="https://www.chikuro.com/public/assets/template/js/main.js"></script>
+
 </body>
+
 </html>
